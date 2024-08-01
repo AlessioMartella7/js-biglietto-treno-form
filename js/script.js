@@ -14,13 +14,13 @@ Questo richiederà un minimo di ricerca.
 /* 
 1-Recupero gli elementi di mio interesse da DOM
 2-creo una costante prezzo/km.
-3-raccolgo i dati dell'utente
-4-calcolo il prezzo base del biglietto
-5-calcolo lo sconto
-6-stampo in console il risultato
-7-aggiungiamo un form
-8-recuperiamo i nuovi dati dal DOM
-9-aggiungiamo degli eventi al bottone
+3-aggiungiamo degli eventi al bottone
+4-preparo lo sconto
+5-calcolo il prezzo base del biglietto
+6-calcolo lo sconto
+7-stampo in console il risultato
+8-aggiungiamo un form
+9-recuperiamo i nuovi dati dal DOM
 10-recuperiamo i valori dell'input
 11-elaboriamo i valori da rimandare al DOM
 12-stampiamo in pagina
@@ -40,12 +40,37 @@ console.log('genButton',genButton);
 const priceByKm = 0.21;
 console.log('priceByKm', priceByKm);
 
-//3-raccolgo i dati dell'utente
 
-const age = ageField.value.trim();
-const km = kmField.value.trim();
+//3 aggiungo degli eventi al bottone
+
+genButton.addEventListener('click', function() {
+    console.log('cliccato')
+    const ageValue = ageField.value;
+    const kmValue = kmField.value;
+    console.log(ageValue);
+    console.log(kmValue);
+    
+})
+
+//preparo lo sconto
+let discount = null;
  
 //4-calcolo il prezzo base del biglietto
+const km = kmField.value;
+console.log('km',km);
+
+const basePrice = (km * priceByKm);
+let finalPrice = basePrice;
+console.log('basePrice',basePrice);
+
+if (age > 65) discount = 40;
+else if (age < 18) discount = 20;
+
+const discountAmount = (finalPrice / 100) * discount;
+console.log ('discountAmount',discountAmount);
+
+finalPrice -= discountAmount;
+console.log('finalPrice', finalPrice);
 
 
 
