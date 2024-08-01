@@ -47,30 +47,33 @@ genButton.addEventListener('click', function() {
     console.log('cliccato')
     const ageValue = ageField.value;
     const kmValue = kmField.value;
+    
+    //4preparo lo sconto
+    let discount = null;
+    
+    //5-calcolo il prezzo base del biglietto
+    const km = kmField.value;
+    console.log('km',km);
+    
+    const basePrice = (km * priceByKm);
+    let finalPrice = basePrice;
+    console.log('basePrice',basePrice);
+    
+    //6-calcolo lo sconto
+    if (ageValue > 65) discount = 40;
+    else if (ageValue < 18) discount = 20;
+    
+    const discountAmount = (finalPrice / 100) * discount;
+    console.log ('discountAmount',discountAmount);
+    
+    finalPrice -= discountAmount;
+    
+    //7-stampo in console il risultato
     console.log(ageValue);
     console.log(kmValue);
-    
+    console.log('finalPrice', finalPrice.toFixed(2));
 })
 
-//preparo lo sconto
-let discount = null;
- 
-//4-calcolo il prezzo base del biglietto
-const km = kmField.value;
-console.log('km',km);
-
-const basePrice = (km * priceByKm);
-let finalPrice = basePrice;
-console.log('basePrice',basePrice);
-
-if (age > 65) discount = 40;
-else if (age < 18) discount = 20;
-
-const discountAmount = (finalPrice / 100) * discount;
-console.log ('discountAmount',discountAmount);
-
-finalPrice -= discountAmount;
-console.log('finalPrice', finalPrice);
 
 
 
