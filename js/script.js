@@ -19,11 +19,8 @@ Questo richiederà un minimo di ricerca.
 5-calcolo il prezzo base del biglietto
 6-calcolo lo sconto
 7-stampo in console il risultato
-8-aggiungiamo un form
-9-recuperiamo i nuovi dati dal DOM
-10-recuperiamo i valori dell'input
-11-elaboriamo i valori da rimandare al DOM
-12-stampiamo in pagina
+8-recuperiamo i nuovi dati dal DOM
+9-elaboriamo i valori da rimandare al DOM e stampiamo
 */
 
 //1-Recupero gli elementi di mio interesse da DOM
@@ -73,7 +70,27 @@ genButton.addEventListener('click', function(e) {
     console.log(ageValue);
     console.log(kmValue);
     console.log('finalPrice', finalPrice.toFixed(2));
+    
+
+    //8-recuperiamo i nuovi dati dal DOM
+    const ageElement = document.getElementById('printed-age');
+    const kmElement = document.getElementById('printed-km');
+    const priceElement = document.getElementById('printed-price');
+    console.log('ageElement',ageElement);
+    console.log('kmElement',kmElement);
+    console.log('priceElement',priceElement);
+
+    //9- Elaboriamo i valori da rimandare al DOM e stampiano
+
+    if(ageValue && kmValue) {
+    ageElement.innerText += ` ${ageValue}`;
+    kmElement.innerText += ` ${kmValue} Km` ;
+    priceElement.innerText += ` ${finalPrice.toFixed(2)} €`;
+    ageField.value ='';
+    kmField.value = '';
+    }
 })
+
 
 
 
