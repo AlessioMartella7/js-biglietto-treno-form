@@ -42,5 +42,12 @@ console.log('priceByKm', priceByKm);
 
 //3-raccolgo i dati dell'utente
 
+const age = ageField.value.trim();
+const km = kmField.value.trim();
+ 
+//4-calcolo il prezzo base del biglietto
+
+
+
 
 
