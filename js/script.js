@@ -25,3 +25,22 @@ Questo richiederà un minimo di ricerca.
 11-elaboriamo i valori da rimandare al DOM
 12-stampiamo in pagina
 */
+
+//1-Recupero gli elementi di mio interesse da DOM
+
+const ageField = document.getElementById('age');
+const kmField = document.getElementById('distance');
+const genButton = document.getElementById('generate');
+console.log('ageField', ageField);
+console.log('kmField', kmField);
+console.log('genButton',genButton);
+
+//2-creo una costante prezzo/km.
+
+const priceByKm = 0.21;
+console.log('priceByKm', priceByKm);
+
+//3-raccolgo i dati dell'utente
+
+
+
