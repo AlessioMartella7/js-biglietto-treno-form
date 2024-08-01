@@ -43,7 +43,8 @@ console.log('priceByKm', priceByKm);
 
 //3 aggiungo degli eventi al bottone
 
-genButton.addEventListener('click', function() {
+genButton.addEventListener('click', function(e) {
+    e.preventDefault();
     console.log('cliccato')
     const ageValue = ageField.value;
     const kmValue = kmField.value;
@@ -73,6 +74,7 @@ genButton.addEventListener('click', function() {
     console.log(kmValue);
     console.log('finalPrice', finalPrice.toFixed(2));
 })
+
 
 
 

@@ -9,11 +9,54 @@
 
 body{
     font-family:'Rubik Mono One', sans-serif;
+    background-color: cadetblue;
 }
 
 /* Utilities */
 
 .container{
-    max-width: 1000px;
+    max-width: 600px;
     margin: 0 auto;
 }
+
+.insert-text {
+    text-align: center;
+    margin-bottom: 15px;
+   
+}
+
+.comp-dati {
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    flex-basis: calc(100% / 2 - 20px /2);
+    margin: 0 auto;
+}
+
+input {
+    border-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: cadetblue ;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
